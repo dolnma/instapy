@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  sshd:
+    build:
+      context: ./sshd
+    ports:
+      - "22:22"
+    volumes:
+      - /var/
