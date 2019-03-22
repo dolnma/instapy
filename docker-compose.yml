@@ -7,4 +7,4 @@ services:
     ports:
       - "22:22"
     volumes:
-      - ./var/:/var/bot1
+      - ./data/bot1/:/var/bot1
