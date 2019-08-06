@@ -6,8 +6,8 @@ from selenium.common.exceptions import NoSuchElementException
 
 from instapy import InstaPy
 
-insta_username = 'dollysdev'
-insta_password = 'Oo8ApySJHc69Qcha'
+insta_username = 'anettfryms'
+insta_password = 'alfa123456'
 
 # set 
 # headless_browser=True 
@@ -33,21 +33,28 @@ def Job():
                     delimit_by_numbers=True,
                     max_followers=4590,
                         max_following=5555,
-                        min_followers=45,
-                        min_following=77)
+                        min_followers=10,
+                        min_following=10)
         session.set_user_interact(amount=4,
 				 percentage=50,
                   randomize=True,
                    media='Photo')
-        session.set_do_comment(True, percentage=20)
+        session.set_do_comment(True, percentage=80)
         session.set_do_follow(True, percentage=80)
-        session.set_comments(['That is cool! \u270A', 'So much fun!!', 'Nice!!' , 'Well done! :)', 'Good job! :))'])
-        session.unfollow_users(amount=200, allFollowing=True, style="FIFO", unfollow_after=0, sleep_delay=1)
+        session.set_comments(['That is cool! \u270A', 'Wow! :) :heart_eyes:', ':heart_eyes: :heart_eyes: :heart_eyes:' , ':+1: :punch:', 'Seems good :pray: :pray:', ':pray:', 'cool :wink:', ':thumbsup:', 'i like it :thumbsup: :thumbsup:', ':muscle:'])
 
         # actions
         for cycle in range(20):
             print("\n\nLOOP {}\n".format(cycle+1))
-            session.unfollow_users(amount=200, allFollowing=True, style="FIFO", unfollow_after=0, sleep_delay=0)
+            session.like_by_tags(['czechboy', 'boy', 'man', 'czechman'], amount=20)
+            # session.interact_user_followers(['worldcode', 'creativroom', 'thebeeest'], amount=20, randomize=True)
+            # session.unfollow_users(amount=200, allFollowing=True, style="FIFO", unfollow_after=1, sleep_delay=0)
+            # time.sleep(50)   #take a 50 seconds of break after finishing the feature above
+            # session.unfollow_users(amount=60, InstapyFollowed=(True), style="FIFO", sleep_delay=501)
+            # session.unfollow_users(amount=40, allFollowing=True, style="LIFO", unfollow_after=3*60*60, sleep_delay=450)
+            # time.sleep(30)   #take some more break after finishing unfollows
+            # time.sleep(60)
+            # session.follow_by_tags(['webdesign', 'coding', 'frontend'], amount=30)
 
     except Exception as exc:
         # if changes to IG layout, upload the file to help us locate the change

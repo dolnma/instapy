@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get update && apt-get install -y openssh-server
 RUN apt-get install -y mc
 RUN apt-get install -y python3-pip
@@ -10,6 +11,7 @@ RUN pip3 install instapy
 # RUN mkdir /var/run/sshd
 RUN mkdir /var/bot1
 RUN mkdir /var/bot2
+RUN mkdir /var/run/sshd
 RUN echo 'root:alfa123' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 

@@ -6,8 +6,8 @@ from selenium.common.exceptions import NoSuchElementException
 
 from instapy import InstaPy
 
-insta_username = 'dollysdev'
-insta_password = 'Oo8ApySJHc69Qcha'
+insta_username = 'anettfryms'
+insta_password = 'alfa123456'
 
 # set 
 # headless_browser=True 
@@ -42,7 +42,6 @@ def Job():
         session.set_do_comment(True, percentage=20)
         session.set_do_follow(True, percentage=80)
         session.set_comments(['That is cool! \u270A', 'So much fun!!', 'Nice!!' , 'Well done! :)', 'Good job! :))'])
-        session.unfollow_users(amount=200, allFollowing=True, style="FIFO", unfollow_after=0, sleep_delay=1)
 
         # actions
         for cycle in range(20):
