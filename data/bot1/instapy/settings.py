@@ -10,6 +10,8 @@ from os import environ as environmental_variables
 from os.path import join as join_path
 from os.path import exists as path_exists
 
+from .xpath import read_xpath
+
 
 WORKSPACE = {"name": "InstaPy",
              "path": environmental_variables.get("INSTAPY_WORKSPACE")}
@@ -71,7 +73,10 @@ class Settings:
     # store what browser the user is using, if they are using firefox it is
     # true, chrome if false.
     use_firefox = None
-
+    user_agent = (
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+        '(KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
+    )
     # state of instantiation of InstaPy
     InstaPy_is_running = False
 
@@ -91,6 +96,6 @@ class Selectors:
     """
 
     likes_dialog_body_xpath = (
-        "//h1[text()='Likes']/../../following-sibling::div/div")
+        read_xpath("class_selectors","likes_dialog_body_xpath"))
 
-    likes_dialog_close_xpath = "//span[contains(@aria-label, 'Close')]"
+    likes_dialog_close_xpath = read_xpath("class_selectors","likes_dialog_close_xpath")
