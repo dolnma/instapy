@@ -5,6 +5,6 @@ services:
     build:
       context: ./sshd
     ports:
-      - "22:22"
+      - "23:22"
     volumes:
       - ./data/bot1/:/var/bot1
