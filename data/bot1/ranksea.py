@@ -17,8 +17,8 @@ import requests
 from instapy import InstaPy
 from instapy import smart_run
 
-insta_username = 'dollysdev'
-insta_password = 'Oo8ApySJHc69Qcha'
+insta_username = 'ranksea'
+insta_password = 'Ww9zU5l61ldrJKlo'
 
 
 def get_session():
@@ -34,7 +34,7 @@ def get_session():
 def follow():
     # Send notification to my Telegram
     requests.get(
-        "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text='dollysdev Follower Started @ {}'"
+        "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text='ranksea Follower Started @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
 
     # get a session!
@@ -80,10 +80,8 @@ def follow():
                 session.set_delimit_commenting(enabled=True, max=20, min=0)
 
                 # activity
-                session.follow_by_tags(['website', 'webdesign', 'webdev', 'freelancer'], amount=10)
-                session.follow_user_followers(['worldcode', 'creativroom', 'thebeeest'], amount=10,
-                                              randomize=False)
-                session.like_by_tags(['website', 'webdesign', 'webdev', 'freelancer'], amount=300)
+                session.follow_by_tags(['counterstrike', 'csgo', 'global', 'esports'], amount=10)
+                session.like_by_tags(['counterstrike', 'csgo', 'global', 'esports'], amount=300)
                 session.unfollow_users(amount=25, allFollowing=True,
                                        style="LIFO",
                                        unfollow_after=3 * 60 * 60,
@@ -94,14 +92,14 @@ def follow():
 
     # Send notification to my Telegram
     requests.get(
-        "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text='dollysdev Follower Stopped @ {}'"
+        "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text='ranksea Follower Stopped @ {}'"
         .format(datetime.now().strftime("%H:%M:%S")))
 
 
 def unfollow():
     requests.get(
-        "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575/sendMessage?chat_id=*****&text"
-        "='dollysdev Unfollower Started @ {}'"
+        "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text"
+        "='ranksea Unfollower Started @ {}'"
         .format(datetime.now().strftime("%H:%M:%S")))
 
     # get a session!
@@ -122,7 +120,7 @@ def unfollow():
 
     requests.get(
         "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text"
-        "='dollysdev Unfollower Stopped @ {}'"
+        "='ranksea Unfollower Stopped @ {}'"
         .format(datetime.now().strftime("%H:%M:%S")))
 
 

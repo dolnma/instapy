@@ -17,8 +17,8 @@ import requests
 from instapy import InstaPy
 from instapy import smart_run
 
-insta_username = 'dollysdev'
-insta_password = 'Oo8ApySJHc69Qcha'
+insta_username = 'ranksea'
+insta_password = 'Ww9zU5l61ldrJKlo'
 
 
 def get_session():
@@ -33,7 +33,7 @@ def get_session():
 def xunfollow():
     requests.get(
         "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text"
-        "='dollysdev Unfollower Started @ {}'"
+        "='ranksea Unfollower WEDNESDAY Started @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
 
     # get a session!
@@ -46,16 +46,16 @@ def xunfollow():
             session.set_relationship_bounds(enabled=False, potency_ratio=1.21)
 
             # actions
-            session.unfollow_users(amount=2000, allFollowing=True,
+            session.unfollow_users(amount=5000, allFollowing=True,
                                    style="RANDOM", unfollow_after=3 * 60 * 60,
-                                   sleep_delay=150)
+                                   sleep_delay=200)
 
         except Exception:
             print(traceback.format_exc())
 
     requests.get(
         "https://api.telegram.org/bot439604565:AAE3K9FIReY512NNgb1GryjhdX35L_2RDYw/sendMessage?chat_id=505840575&text"
-        "='dollysdev Unfollower WEDNESDAY Stopped @ {}'"
+        "='ranksea Unfollower WEDNESDAY Stopped @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
 
 
